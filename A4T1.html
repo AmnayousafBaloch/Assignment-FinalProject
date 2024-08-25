@@ -1,0 +1,32 @@
+<html>
+    <body>
+   <h3>Enter any Numbers</h3>
+   <input id="input0" type="text"/><br>
+   <input id="input1" type="text"/><br>
+   <input id="input2" type="text"/><br>
+   <input id="input2" type="text"/><br>
+   <input id="input3" type="text"/><br>
+   <input id="input4" type="text"/><br>
+   <input id="input5" type="text"/><br>
+   <input id="input6" type="text"/><br>
+   <input id="input7" type="text"/><br>
+   <input id="input8" type="text"/><br>
+   <input id="input9" type="text"/><br>
+   <button onclick="totalsum()" >Submit</button>
+   <ul id="resultList"></ul><br>
+
+        <script>
+            function totalsum(){
+                let sum =0;
+                for(i=0;i<10;i++){
+                const value = Number(document.getElementById(`input${i}`).value );
+                if(!isNaN(value)){
+                    sum +=value;}}
+                    const result = document.getElementById("result");
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Sum: ${sum}`;
+                    resultList.appendChild(listItem);
+                  }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form id="oddForm">
+            <input type="number" id="startRange" placeholder="Start Range">
+            <input type="number" id="endRange" placeholder="End Range">
+            <button type="button" onclick="printOddNumbers()">Print Odd Numbers</button>
+        </form>
+        <p id="oddResult"></p>
+
+        <script>
+            function printOddNumbers() {
+                let start = Number(document.getElementById('startRange').value);
+                let end = Number(document.getElementById('endRange').value);
+                let oddNumbers = [];
+            
+                for (let i = start; i <= end; i++) {
+                    if (i % 2 !== 0) {
+                        oddNumbers.push(i);
+                    }
+                }
+            
+                document.getElementById('oddResult').innerText = 'Odd Numbers: ' + oddNumbers.join(', ');
+            }
+        </script>
+    </body>
+</html>
