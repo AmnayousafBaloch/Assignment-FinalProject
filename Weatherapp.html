@@ -68,7 +68,7 @@
     const input = document.querySelector("#cityName").value;
     const URL = `https://p2pclouds.up.railway.app/v1/learn/weather?city=${input}`;
   
-    try {
+    try {//try it
       let response = await fetch(URL);
   
       if (!response.ok) {
